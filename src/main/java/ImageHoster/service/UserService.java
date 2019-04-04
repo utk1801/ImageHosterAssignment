@@ -32,4 +32,14 @@ public class UserService {
         }
     }
 
+    public Boolean isPasswordValid(String password) {
+        String pattern = "((?=.*\\d)(?=.*[a-zA-Z])(?=.*[^a-zA-Z0-9]).*)";
+        System.out.println(password.matches(pattern));
+        if(password.matches(pattern))
+            return true;
+        else
+            return false;
+
+    }
+
 }
